@@ -21,6 +21,12 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+	<style>
+		.reveal section img {
+			border: none;
+			background: none;
+		}
+	</style>
 </head>
 
 <body>
@@ -28,39 +34,41 @@
 		<div class="slides">
 			<section>
 				<h1>
-					<img src="java.svg" style="vertical-align: text-bottom; border: none; width: 20%; background: none">
+					<img src="java.svg" style="vertical-align: text-bottom; width: 20%">
 						<code>-></code>
-					<img src="kotlin.svg" style="vertical-align: text-bottom; border: none; width: 20%; background: none">
+					<img src="kotlin.svg" style="vertical-align: text-bottom; width: 20%">
 				</h1>
 				<p>Migration vers Kotlin</p>
 			</section>
 			<section data-background="java-island.jpg">
-				java
-				90's
-				Sun Microsystems puis Oracle
+				java 90's Sun Microsystems puis Oracle
 			</section>
 			<section data-background="kotlin-island.jpg">
-				Kotlin
-				2011
-				JetBrains
+				Kotlin 2011 JetBrains Google I/O 2017
 			</section>
 			<section>
 				<h2>Éxistant</h2>
+				<p><img src="packid.png" style="width: 5%; vertical-align: text-bottom">Pack ID</p>
 				<ul>
 					<li>3 applis web en java</li>
 					<li>1 appli iOS en swift</li>
 					<li>1 appli android en java</li>
 				</ul>
-				<code>
+				<p>
+					<code>
 					find . \( -name "*.java" -o -name "*.kt" \)  | grep -v target | xargs wc -l
 					44722
 				</code>
+				</p>
 			</section>
 			<section>
 				mixed sources
 			</section>
 			<section>
 				Réduction du nombre de lignes
+			</section>
+			<section>
+				exceptions
 			</section>
 			<section>
 				filter map
